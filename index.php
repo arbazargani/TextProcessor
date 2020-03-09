@@ -13,14 +13,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TextProcessor Engine</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/1/11/Fast_text.png" type="image/x-icon">
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/css/uikit-rtl.min.css" />
+    <link rel="stylesheet" href="assets/css/uikit-rtl.min.css" />
     <style>
+        html {
+            background: #f9f9f9;
+        }
         * {
             font-family: IranSans !important;
         }
         a {
             color: orange !important;
+        }
+        #page-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: gray;
+            text-align: center;
+        }
+        #page-footer a {
+            color: black !important;
         }
     </style>
 
@@ -32,7 +47,7 @@
     <div class="uk-padding">
 <?php endif; ?>
     <div>
-        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-margin-medium-bottom">
             <h3 class="uk-card-title">ثبت متن</h3>
             <form class="uk-form-stacked" method="POST">
                 <div class="uk-margin">
@@ -53,10 +68,15 @@
     <div>
         <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-border-rounded">
             <h3 class="uk-card-title">متن ساختار یافته</h3>
-            <p style="height: 500px; overflow: scroll;"><?php echo $final; ?></p>
+            <p><?php echo $final; ?></p>
         </div>
     </div>
     <?php endif; ?>
 </div>
+<footer id="page-footer" class="uk-margin-top uk-background-muted uk-box-shadow-medium">
+    <div class="uk-container uk-padding-small">
+        <p class="uk-text-small">© <?php echo date('Y'); ?> | <a href="mailto:arbazargani1998@gmail.com">Alireza Bazargani</a>, All Rights Reserved</p>
+    </div>
+</footer>
 </body>
 </html>
