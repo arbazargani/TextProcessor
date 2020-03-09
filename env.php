@@ -1,10 +1,11 @@
 <?php
     $hrefs = [
-        'پزشکی' => 'https://rokna.net/tag/پزشکی',
+        'پزشک' => 'https://rokna.net/tag/پزشکی',
         'اقتصاد' => 'https://rokna.net/tag/اقصتاد',
         'سیاسی' => 'https://rokna.net/tag/سیاسی',
         'ترور' => 'https://rokna.net/tag/ترور',
         'شیاطین' => 'https://rokna.net/tag/شیاطین',
+        'پلیس' => 'https://rokna.net/tag/پلیس',
     ];
 
     $fa_char = [
