@@ -16,6 +16,9 @@
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/1/11/Fast_text.png" type="image/x-icon">
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="assets/css/uikit-rtl.min.css" />
+
+    <!-- TinyMCE JS -->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <style>
         html {
             background: #f9f9f9;
@@ -51,6 +54,11 @@
             <h3 class="uk-card-title">ثبت متن</h3>
             <form class="uk-form-stacked" method="POST">
                 <div class="uk-margin">
+                <script>
+                    tinymce.init({
+                        selector: '#content'
+                    });
+                </script>
                     <label class="uk-form-label" for="content">محتوای خبر</label>
                     <div class="uk-form-controls">
                         <textarea class="uk-textarea" name="content" id="content" rows="10"></textarea>
