@@ -56,7 +56,8 @@
                 <div class="uk-margin">
                 <script>
                     tinymce.init({
-                        selector: '#content'
+                        // selector: '#content',
+                        directionality : "rtl"
                     });
                 </script>
                     <label class="uk-form-label" for="content">محتوای خبر</label>
@@ -68,6 +69,11 @@
                     <div class="uk-form-controls uk-float-left">
                         <button class="uk-button uk-button-primary uk-border-rounded" type="submit">بازبینی</button>
                     </div>
+                    <ul class="uk-list uk-list-bullet">
+                        <li>
+                            <p>برای ایجاد خط جدید در متن نهایی، از <code>***</code> استفاده نمایید.</p>
+                        </li>
+                    </ul>
                 </div>
             </form>
         </div>

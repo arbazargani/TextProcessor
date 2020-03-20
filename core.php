@@ -1,6 +1,10 @@
 <?php
 require_once 'env.php';
-$content = $_POST['content'];
+require_once 'helpers.php';
+$content = $_POST['content']; // دریافت محتوا
+
+$content = ApplyAllHelpers($content); //اعمال توابع مدیریت ورودی
+
 $exploded = explode(' ', $content); //تبدیل محتوا به ارایه
 $founds = []; // جهت استفاده برای عدم لینک کردن مجدد یک کلمه
 foreach ($exploded as $key => $word) { // طی کردن طول آرایه محتوا
@@ -35,3 +39,4 @@ foreach ($exploded as $key => $word) { // طی کردن طول آرایه محت
     }
 }
 $final = implode(' ',$exploded);
+$final = str_replace('+++', '<br/>', $final);

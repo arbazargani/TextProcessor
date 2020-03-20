@@ -6,6 +6,7 @@
         'ترور' => 'https://rokna.net/tag/ترور',
         'شیاطین' => 'https://rokna.net/tag/شیاطین',
         'پلیس' => 'https://rokna.net/tag/پلیس',
+        'قتل' => 'https://rokna.net/tag/قتل',
     ];
 
     $fa_char = [
@@ -69,4 +70,9 @@
         'x',
         'y',
         'z',
+    ];
+
+    $allowed_tags = [
+        '<br/>',
+        '<br>'
     ];
