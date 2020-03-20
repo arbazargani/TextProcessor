@@ -69,11 +69,13 @@
                     <div class="uk-form-controls uk-float-left">
                         <button class="uk-button uk-button-primary uk-border-rounded" type="submit">بازبینی</button>
                     </div>
-                    <ul class="uk-list uk-list-bullet">
-                        <li>
-                            <p>برای ایجاد خط جدید در متن نهایی، از <code>***</code> استفاده نمایید.</p>
-                        </li>
-                    </ul>
+                    <div class="uk-float-right">
+                        <ul class="uk-list uk-list-bullet">
+                            <li>
+                                <p>برای ایجاد خط جدید در متن نهایی، از <code>***</code> استفاده نمایید.</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </form>
         </div>
