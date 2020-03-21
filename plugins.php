@@ -1,7 +1,6 @@
 <?php
     $plugins = [
         'SEO' => 1,
-        'KeywordManager' => 0
     ];
 
     foreach ($plugins as $name => $state) {

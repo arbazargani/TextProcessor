@@ -1,13 +1,21 @@
 <?php
-    $hrefs = [
-        'پزشک' => 'https://rokna.net/tag/پزشکی',
-        'اقتصاد' => 'https://rokna.net/tag/اقصتاد',
-        'سیاسی' => 'https://rokna.net/tag/سیاسی',
-        'ترور' => 'https://rokna.net/tag/ترور',
-        'شیاطین' => 'https://rokna.net/tag/شیاطین',
-        'پلیس' => 'https://rokna.net/tag/پلیس',
-        'قتل' => 'https://rokna.net/tag/قتل',
-    ];
+    function hrefMaker() {
+        $base = 'http://hadesenews.ir/tag';
+
+        // add keyword here and fell power!
+        $keywords = 'حوادث حادثه پرونده سرقت قتل تجاوز جنایی جسد تصادف سانحه مواد مخدر ماده مخدر پرونده جنایت درگیری مسلحانه سارق دستگیر دستگیری بازداشت فساد اقتصادی سیل زلزله رانش زمین اختلاس';
+
+        $exp = explode(' ', $keywords);
+        $hrefs = [];
+
+        foreach ($exp as $index) {
+            $hrefs["$index"] = "$base/$index";
+        }
+
+        return $hrefs;
+    }
+
+    $hrefs = hrefMaker();
 
     $fa_char = [
         'ا',
