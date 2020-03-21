@@ -76,3 +76,6 @@
         '<br/>',
         '<br>'
     ];
+
+    $load_plugins = true;
+    $debug = false;

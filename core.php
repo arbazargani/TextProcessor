@@ -1,9 +1,24 @@
 <?php
+// load environments
 require_once 'env.php';
 require_once 'helpers.php';
-$content = $_POST['content']; // دریافت محتوا
 
-$content = ApplyAllHelpers($content); //اعمال توابع مدیریت ورودی
+// load requirements
+if ($load_plugins) {
+    require_once 'plugins.php';
+}
+
+// variables handling
+$content = $_POST['content'];
+$keyword = $_POST['keyword'];
+
+// Apply helper functions from 'helpers.php' for input handling
+$content = ApplyAllHelpers($content);
+
+// if keyword sets and SEO plugin loades successfully, proccess should be done
+if(isset($_POST['keyword']) && strlen($_POST['keyword']) > 0 && function_exists('CheckKeywordDensity')) {
+    $optimizeInfo = CheckKeywordDensity($content, $keyword);
+}
 
 $exploded = explode(' ', $content); //تبدیل محتوا به ارایه
 $founds = []; // جهت استفاده برای عدم لینک کردن مجدد یک کلمه
