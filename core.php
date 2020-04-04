@@ -28,13 +28,13 @@ foreach ($exploded as $key => $word) { // طی کردن طول آرایه محت
         if (strpos($word, $anchor) !== false) {
             $exact = substr($word, 0, strlen($anchor)); // ساخت زیر رشته از کلمه بصورت دقیق برای جایگیزینی
             // چک کردن کاراکتر فارسی قبل یا بعد برای عدم لینک بین کلمه ای
-            foreach($fa_char as $unallowed) { 
+            foreach($fa_char as $unallowed) {
                 if( strpos(str_replace($exact, '', $word), $unallowed) !== false ) {
                     $state = 0;
                 }
             }
 
-            foreach($en_char as $unallowed) { 
+            foreach($en_char as $unallowed) {
                 if( strpos(str_replace($exact, '', $word), $unallowed) !== false ) {
                     $state = 0;
                 }
@@ -55,3 +55,4 @@ foreach ($exploded as $key => $word) { // طی کردن طول آرایه محت
 }
 $final = implode(' ',$exploded);
 $final = str_replace('+++', '<br/>', $final);
+$final = ReplaceAuthor($final);

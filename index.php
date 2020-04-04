@@ -1,5 +1,5 @@
 <?php
-    error_reporting(0);
+    error_reporting(E_ALL);
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         require_once 'core.php';
     }
@@ -19,6 +19,14 @@
 
     <!-- TinyMCE JS -->
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <!-- Clipboard JS -->
+    <!-- <script src="https://rawcdn.githack.com/zenorocha/clipboard.js/v2.0.4/dist/clipboard.min.js"></script>
+    <script>
+        var clipboard = new Clipboard('#copy');
+    </script> -->
+
+
     <style>
         html {
             background: #f9f9f9;
@@ -56,7 +64,7 @@
                 <div class="uk-margin">
                 <script>
                     tinymce.init({
-                        // selector: '#content',
+                        selector: '#content',
                         directionality : "rtl"
                     });
                 </script>
@@ -88,8 +96,15 @@
     <?php if(isset($final) && $final): ?>
     <div>
         <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-border-rounded">
-            <h3 class="uk-card-title">متن ساختار یافته</h3>
-            <p><?php echo $final; ?></p>
+            <span class="uk-h3 uk-card-title">متن ساختار یافته</span>
+            <!-- <span class="uk-float-left">
+                <button class="btn" id="copy" data-clipboard-target="#final">
+                    <img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy to clipboard" style="max-width: 15px;">
+                </button>
+            </span> -->
+            <div>
+                <p><?php echo $final; ?></p>
+            </div>
         </div>
     </div>
     <?php endif; ?>
